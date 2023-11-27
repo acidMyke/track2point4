@@ -8,7 +8,8 @@ module.exports = {
   quoteProps: 'consistent',
   plugins: ['prettier-plugin-svelte', '@trivago/prettier-plugin-sort-imports', 'prettier-plugin-tailwindcss'],
   importOrder: [
-    '^react',
+    '^svelte',
+    '$',
     '<THIRD_PARTY_MODULES>',
     '^[./](?!.*\\.(css|scss|less|styl|png|jpg|jpeg|gif|svg|ttf|woff|woff2|eot|otf)$)',
     '^[./]',
