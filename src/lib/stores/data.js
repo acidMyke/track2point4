@@ -20,9 +20,10 @@ export const conducts = writable([]);
 
 export const readSaved = () => {
   const data = localStorage.getItem('savedConducts');
-  if (!data) return 0;
+  if (!data) return [];
+  /** @type {ConductInfo[]} */
   const parsedData = JSON.parse(data);
-  if (!Array.isArray(parsedData)) return 0;
+  if (!Array.isArray(parsedData)) return [];
   conducts.set(parsedData);
-  return parsedData.length;
+  return parsedData;
 };
